@@ -46,15 +46,15 @@ export default function Navbar({ onOpenConsultation }: NavbarProps) {
           : 'bg-transparent py-5'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          {/* Logo Brand SVG */}
+      <div className="w-full px-4 sm:px-6 lg:px-10 xl:px-12">
+        <div className="flex items-center justify-between gap-4">
+          {/* Logo Brand SVG on the left */}
           <a
             href="#"
             id="brand-logo"
-            className="flex items-center group focus:outline-none"
+            className="flex items-center group focus:outline-none shrink-0"
           >
-            <Logo size="md" />
+            <Logo size="lg" />
           </a>
 
           {/* Desktop Navigation Links */}

@@ -15,7 +15,7 @@ export default function Footer() {
           
           {/* Brand Col */}
           <div className="md:col-span-2 space-y-3">
-            <Logo size="md" />
+            <Logo size="lg" />
             <p className="text-xs text-slate-400 max-w-sm leading-relaxed">
               <strong>Robert Chlebowski SIGE</strong> — Profesjonalne projektowanie i wdrożenia systemów telewizji hotelowej (Hospitality TV / IPTV) oraz rozwiązań Digital Signage dla sektora hotelarskiego i biznesu.
             </p>

@@ -124,10 +124,10 @@ export default function Logo({
   transparentBg = false,
 }: LogoProps) {
   const sizeClasses = {
-    sm: 'h-7',
-    md: 'h-9 sm:h-10',
-    lg: 'h-12 sm:h-14',
-    xl: 'h-16 sm:h-20',
+    sm: 'h-8 sm:h-9',
+    md: 'h-11 sm:h-12',
+    lg: 'h-14 sm:h-16',
+    xl: 'h-20 sm:h-24',
   };
 
   return (
