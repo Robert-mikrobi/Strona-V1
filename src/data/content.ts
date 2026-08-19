@@ -2,7 +2,7 @@ import { ServiceItem, TechnologyItem, FAQItem, CaseStudyItem } from '../types';
 
 export const COMPANY_INFO = {
   name: 'Robert Chlebowski SIGE',
-  brandName: 'sige.tech',
+  brandName: 'SIGE',
   tagline: 'Projektowanie i wdrożenia systemów telewizji hotelowej oraz Digital Signage',
   owner: 'Robert Chlebowski',
   email: 'robert.chlebowski@sige.tech',

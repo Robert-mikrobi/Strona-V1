@@ -21,7 +21,7 @@ export default function Hero({ onExploreCalculator, onContactClick }: HeroProps)
           
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-cyan-500/30 text-cyan-300 text-xs font-semibold shadow-lg shadow-cyan-950/50 backdrop-blur-md">
             <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-            <span>Robert Chlebowski SIGE • sige.tech</span>
+            <span>Robert Chlebowski • SIGE</span>
             <span className="text-slate-500">|</span>
             <span className="text-slate-300">15+ lat doświadczenia inżynieryjnego</span>
           </div>

@@ -88,7 +88,7 @@ export default function Footer({ onOpenPrivacyPolicy, onOpenCookieSettings }: Fo
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
-            <span>© {new Date().getFullYear()} Robert Chlebowski SIGE (sige.tech). Wszelkie prawa zastrzeżone.</span>
+            <span>© {new Date().getFullYear()} Robert Chlebowski SIGE. Wszelkie prawa zastrzeżone.</span>
             {onOpenPrivacyPolicy && (
               <button
                 type="button"

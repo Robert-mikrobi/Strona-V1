@@ -148,7 +148,7 @@ export default function PrivacyPolicyModal({
             </h3>
             <div className="pl-7 space-y-2">
               <p>
-                Strona <strong>sige.tech</strong> wykorzystuje pliki cookies (niewielkie pliki tekstowe zapisywane w pamięci Twojego urządzenia) w celu:
+                Serwis internetowy marki <strong>SIGE</strong> wykorzystuje pliki cookies (niewielkie pliki tekstowe zapisywane w pamięci Twojego urządzenia) w celu:
               </p>
               <ul className="list-disc pl-5 space-y-1 text-slate-400">
                 <li><strong>Niezbędne (Techniczne)</strong>: umożliwiające poprawne wyświetlanie interfejsu, bezpieczeństwo sesji oraz zapis Twoich preferencji dotyczących zgody na ciasteczka. Te pliki nie wymagają zgody.</li>

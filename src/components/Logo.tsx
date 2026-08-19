@@ -145,8 +145,8 @@ export default function Logo({
           <span className="text-[12px] font-bold text-slate-200 tracking-tight">
             Robert Chlebowski
           </span>
-          <span className="text-[10px] text-cyan-400 font-medium tracking-wide">
-            sige.tech
+          <span className="text-[10px] text-cyan-400 font-semibold tracking-wider">
+            SIGE
           </span>
         </div>
       )}

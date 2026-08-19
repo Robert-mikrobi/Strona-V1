@@ -27,7 +27,7 @@ export default function AboutSection() {
             </h2>
 
             <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-              Firma <strong>Robert Chlebowski SIGE (sige.tech)</strong> to niezależna pracownia inżynieryjno-integratorska, 
+              Firma <strong>Robert Chlebowski SIGE</strong> to niezależna pracownia inżynieryjno-integratorska, 
               specjalizująca się w kompleksowym projektowaniu, doborze technologii, montażu i serwisie 
               specjalistycznych systemów telewizji hotelowej (Hospitality TV) oraz profesjonalnych nośników Digital Signage.
             </p>
