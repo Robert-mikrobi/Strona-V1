@@ -9,10 +9,14 @@ import ProcessSection from './components/ProcessSection';
 import FAQSection from './components/FAQSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import CookieBanner from './components/CookieBanner';
+import PrivacyPolicyModal from './components/PrivacyPolicyModal';
 
 export default function App() {
   const [injectedInquiryMessage, setInjectedInquiryMessage] = useState<string>('');
   const [selectedServiceForInquiry, setSelectedServiceForInquiry] = useState<string>('');
+  const [isPrivacyPolicyOpen, setIsPrivacyPolicyOpen] = useState<boolean>(false);
+  const [forceOpenCookieSettings, setForceOpenCookieSettings] = useState<boolean>(false);
 
   const handleScrollToSection = (sectionId: string) => {
     const el = document.getElementById(sectionId);
@@ -67,11 +71,29 @@ export default function App() {
         <ContactSection
           injectedMessage={injectedInquiryMessage}
           selectedService={selectedServiceForInquiry}
+          onOpenPrivacyPolicy={() => setIsPrivacyPolicyOpen(true)}
         />
       </main>
 
-      {/* Footer */}
-      <Footer />
+      {/* Footer with Legal & Cookie triggers */}
+      <Footer
+        onOpenPrivacyPolicy={() => setIsPrivacyPolicyOpen(true)}
+        onOpenCookieSettings={() => setForceOpenCookieSettings(true)}
+      />
+
+      {/* Cookie Consent Banner */}
+      <CookieBanner
+        onOpenPrivacyPolicy={() => setIsPrivacyPolicyOpen(true)}
+        forceOpen={forceOpenCookieSettings}
+        onCloseForceOpen={() => setForceOpenCookieSettings(false)}
+      />
+
+      {/* Privacy Policy & GDPR/RODO Modal */}
+      <PrivacyPolicyModal
+        isOpen={isPrivacyPolicyOpen}
+        onClose={() => setIsPrivacyPolicyOpen(false)}
+        onOpenCookieSettings={() => setForceOpenCookieSettings(true)}
+      />
     </div>
   );
 }

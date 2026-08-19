@@ -1,8 +1,13 @@
-import { Mail, Shield, ChevronUp, ArrowUp } from 'lucide-react';
+import { Mail, Shield, ChevronUp, ArrowUp, Lock, Cookie } from 'lucide-react';
 import { COMPANY_INFO } from '../data/content';
 import Logo from './Logo';
 
-export default function Footer() {
+interface FooterProps {
+  onOpenPrivacyPolicy?: () => void;
+  onOpenCookieSettings?: () => void;
+}
+
+export default function Footer({ onOpenPrivacyPolicy, onOpenCookieSettings }: FooterProps) {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -40,10 +45,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact & Hours */}
+          {/* Contact & Legal */}
           <div className="space-y-2">
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-200">
-              Kontakt Bezpośredni
+              Kontakt & RODO
             </h4>
             <div className="space-y-1 text-xs text-slate-400">
               <p className="font-semibold text-slate-200">Robert Chlebowski</p>
@@ -55,9 +60,26 @@ export default function Footer() {
               <p className="pt-2 text-[11px] text-slate-400">
                 Godziny pracy: Pon - Pt: 8:00 - 18:00
               </p>
-              <p className="text-[11px] text-slate-400">
-                Całodobowy monitoring stacji dla obiektów z umową SLA
-              </p>
+              <div className="pt-2 flex flex-col gap-1 text-[11px]">
+                {onOpenPrivacyPolicy && (
+                  <button
+                    type="button"
+                    onClick={onOpenPrivacyPolicy}
+                    className="text-left text-slate-400 hover:text-cyan-400 transition-colors cursor-pointer"
+                  >
+                    Polityka Prywatności i RODO
+                  </button>
+                )}
+                {onOpenCookieSettings && (
+                  <button
+                    type="button"
+                    onClick={onOpenCookieSettings}
+                    className="text-left text-slate-400 hover:text-cyan-400 transition-colors cursor-pointer"
+                  >
+                    Ustawienia plików cookies
+                  </button>
+                )}
+              </div>
             </div>
           </div>
 
@@ -65,8 +87,17 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400">
-          <div>
-            © {new Date().getFullYear()} Robert Chlebowski SIGE (sige.tech). Wszelkie prawa zastrzeżone.
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <span>© {new Date().getFullYear()} Robert Chlebowski SIGE (sige.tech). Wszelkie prawa zastrzeżone.</span>
+            {onOpenPrivacyPolicy && (
+              <button
+                type="button"
+                onClick={onOpenPrivacyPolicy}
+                className="hover:text-cyan-400 underline underline-offset-2 transition-colors cursor-pointer"
+              >
+                Prywatność i Cookies
+              </button>
+            )}
           </div>
 
           <div className="flex items-center gap-4">

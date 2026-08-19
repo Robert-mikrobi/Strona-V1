@@ -9,9 +9,14 @@ import { ContactFormData } from '../types';
 interface ContactSectionProps {
   injectedMessage?: string;
   selectedService?: string;
+  onOpenPrivacyPolicy?: () => void;
 }
 
-export default function ContactSection({ injectedMessage, selectedService }: ContactSectionProps) {
+export default function ContactSection({
+  injectedMessage,
+  selectedService,
+  onOpenPrivacyPolicy,
+}: ContactSectionProps) {
   const [formData, setFormData] = useState<ContactFormData>({
     fullName: '',
     companyName: '',
@@ -358,8 +363,17 @@ export default function ContactSection({ injectedMessage, selectedService }: Con
                     )}
                   </button>
 
-                  <p className="text-[11px] text-center text-slate-500">
-                    Wysyłając formularz, wyrażasz zgodę na kontakt w celach związanych z przygotowaniem oferty technicznej.
+                  <p className="text-[11px] text-center text-slate-400">
+                    Wysyłając formularz, wyrażasz zgodę na kontakt w celu przygotowania oferty technicznej. Administratorem danych jest Robert Chlebowski SIGE.{' '}
+                    {onOpenPrivacyPolicy && (
+                      <button
+                        type="button"
+                        onClick={onOpenPrivacyPolicy}
+                        className="text-cyan-400 hover:underline inline font-medium cursor-pointer"
+                      >
+                        Pełna Polityka RODO
+                      </button>
+                    )}
                   </p>
 
                 </form>
