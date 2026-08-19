@@ -1,0 +1,8 @@
+{
+  "name": "Remix sige.tech - Telewizja Hotelowa i Digital Signage",
+  "description": "Profesjonalne projektowanie i wdrożenia systemów telewizji hotelowej (Hospitality TV) oraz rozwiązań Digital Signage - Robert Chlebowski SIGE.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
